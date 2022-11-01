@@ -52,9 +52,13 @@ storybook-static/
 # Built Visual Studio Code Extensions
 *.vsix
 
+
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/storybookjs,react,visualstudiocode,git
+# production
+build
+dist
+storybook-static
