@@ -1,0 +1,30 @@
+{
+  "name": "space",
+  "version": "1.0.0",
+  "description": "design system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seokzin/space.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seokzin/space/issues"
+  },
+  "homepage": "https://github.com/seokzin/space#readme",
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
