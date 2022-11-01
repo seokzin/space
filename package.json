@@ -1,24 +1,42 @@
 {
   "name": "space",
   "version": "1.0.0",
-  "description": "design system",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "seokzin's design system",
+  "author": "seokzin",
+  "license": "MIT",
+  "main": "index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seokzin/space.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "design system",
+    "react",
+    "styled-components",
+    "typescript",
+    "storybook"
+  ],
   "bugs": {
     "url": "https://github.com/seokzin/space/issues"
   },
   "homepage": "https://github.com/seokzin/space#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.24",
+    "babel-loader": "^8.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.8.4"
@@ -26,5 +44,6 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "packageManager": "yarn@3.2.4"
 }
