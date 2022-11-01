@@ -1,21 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/storybookjs,react,visualstudiocode,git
-# Edit at https://www.toptal.com/developers/gitignore?templates=storybookjs,react,visualstudiocode,git
-
-### Git ###
-# Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
-*.orig
-
-# Created by git when using merge tools for conflicts
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-*_BACKUP_*.txt
-*_BASE_*.txt
-*_LOCAL_*.txt
-*_REMOTE_*.txt
-
 ### react ###
 .DS_*
 *.log
@@ -32,12 +14,6 @@ psd
 thumb
 sketch
 
-### StorybookJs ###
-# gitignore template for the Storybook, UI guide for front apps
-# website: https://storybook.js.org/
-
-storybook-static/
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -52,9 +28,13 @@ storybook-static/
 # Built Visual Studio Code Extensions
 *.vsix
 
+
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/storybookjs,react,visualstudiocode,git
+# Production
+build
+dist
+storybook-static

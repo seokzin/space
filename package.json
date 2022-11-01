@@ -1,10 +1,15 @@
 {
-  "name": "space",
-  "version": "1.0.0",
+  "name": "@seokzin/space",
+  "version": "1.0.1",
   "description": "seokzin's design system",
   "author": "seokzin",
   "license": "MIT",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seokzin/space.git"
@@ -23,10 +28,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build:storybook": "build-storybook",
+    "publish": "npm publish --access=public"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^9.0.2",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
@@ -39,11 +50,12 @@
     "babel-loader": "^8.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^3.2.5",
+    "rollup-plugin-dts": "^5.0.0",
     "typescript": "^4.8.4"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "packageManager": "yarn@3.2.4"
+  }
 }
