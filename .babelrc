@@ -1,0 +1,14 @@
+{
+  "presets": ["react-app"],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "fileName": true,
+        "displayName": true,
+        "pure": true
+      }
+    ]
+  ]
+}
