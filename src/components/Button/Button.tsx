@@ -25,7 +25,7 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-const Button = ({ backgroundColor, label, ...props }: ButtonProps) => {
+const Button = ({ backgroundColor, label = '버튼', ...props }: ButtonProps) => {
   return (
     <Layout type="button" style={{ backgroundColor }} {...props}>
       {label}
