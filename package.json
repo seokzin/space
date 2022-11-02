@@ -4,16 +4,6 @@
   "description": "seokzin's design system",
   "author": "seokzin",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seokzin/space.git"
-  },
   "keywords": [
     "design system",
     "react",
@@ -21,16 +11,13 @@
     "typescript",
     "storybook"
   ],
-  "bugs": {
-    "url": "https://github.com/seokzin/space/issues"
-  },
-  "homepage": "https://github.com/seokzin/space#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build": "yarn clean && rollup -c rollup.config.ts --configPlugin typescript",
+    "clean": "rm -rf dist",
     "build:storybook": "build-storybook",
-    "publish": "npm publish --access=public"
+    "publish": "npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
@@ -51,11 +38,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.2.5",
-    "rollup-plugin-dts": "^5.0.0",
     "typescript": "^4.8.4"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/seokzin"
   }
 }
