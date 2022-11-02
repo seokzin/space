@@ -5,8 +5,7 @@
     "react",
     "react-hooks",
     "simple-import-sort",
-    "prettier",
-    "functional"
+    "prettier"
   ],
   "parserOptions": {
     "project": "tsconfig.json"
@@ -22,10 +21,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:functional/external-recommended",
-    "plugin:functional/recommended",
-    "plugin:functional/stylistic"
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
@@ -37,5 +33,12 @@
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   },
-  "ignorePatterns": ["!.storybook"]
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "storybook-static",
+    "**/*.config.*"
+  ]
 }

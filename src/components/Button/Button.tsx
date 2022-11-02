@@ -4,37 +4,28 @@ export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean
+  readonly primary?: boolean
   /**
    * What background color to use
    */
-  backgroundColor?: string
+  readonly backgroundColor?: string
   /**
    */
-  size?: 'small' | 'medium' | 'large'
+  readonly size?: 'small' | 'medium' | 'large'
   /**
    * Button contents
    */
-  label: string
+  readonly label: string
   /**
    * Optional click handler
    */
-  onClick?: () => void
+  readonly onClick?: () => void
 }
 
 /**
  * Primary UI component for user interaction
  */
-const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const dummy = []
-  const add = () => null
-
+const Button = ({ backgroundColor, label, ...props }: ButtonProps) => {
   return (
     <Layout type="button" style={{ backgroundColor }} {...props}>
       {label}
