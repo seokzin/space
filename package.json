@@ -16,6 +16,7 @@
     "build": "yarn clean && rollup -c rollup.config.ts --configPlugin typescript",
     "build:storybook": "build-storybook",
     "clean": "rm -rf dist",
+    "clean:all": "rm -rf dist/ node_modules storybook-static yarn.lock coverage",
     "publish": "npm publish",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:css": "stylelint \"**/*.(ts|tsx|css)\"",
