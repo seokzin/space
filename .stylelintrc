@@ -1,0 +1,18 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-concentric-order"],
+  "customSyntax": "@stylelint/postcss-css-in-js",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "function-no-unknown": null,
+    "declaration-empty-line-before": null,
+    "value-keyword-case": null,
+    "no-descending-specificity": null,
+    "no-empty-source": null,
+    "alpha-value-notation": [
+      "number",
+      {
+        "exceptProperties": ["width", "height"]
+      }
+    ]
+  }
+}

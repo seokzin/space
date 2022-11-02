@@ -38,3 +38,6 @@ sketch
 build
 dist
 storybook-static
+
+# Testing
+/coverage

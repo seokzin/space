@@ -1,10 +1,10 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
-import pkg from './package.json' assert { type: 'json' };
+import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
+import typescript from '@rollup/plugin-typescript'
+import pkg from './package.json' assert { type: 'json' }
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-const external = ['react', 'react-dom', 'styled-components'];
+const extensions = ['.js', '.jsx', '.ts', '.tsx']
+const external = ['react', 'react-dom', 'styled-components']
 
 export default [
   {
@@ -28,4 +28,4 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
     ],
   },
-];
+]
