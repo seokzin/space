@@ -6,4 +6,11 @@ module.exports = {
     '@storybook/addon-interactions',
   ],
   framework: '@storybook/react',
-};
+  typescript: {
+    check: true,
+  },
+  core: {
+    builder: 'webpack5',
+  },
+  staticDirs: ['../public'],
+}
