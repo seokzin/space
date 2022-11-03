@@ -1,3 +1,6 @@
+import path from 'path'
+import { Configuration } from 'webpack'
+
 module.exports = {
   stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -13,4 +16,14 @@ module.exports = {
     builder: 'webpack5',
   },
   staticDirs: ['../public'],
+  webpackFinal: async (config: Configuration) => {
+    if (config.resolve?.alias) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': path.resolve(__dirname, '../src/'),
+      }
+    }
+
+    return config
+  },
 }
