@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     'storybook-dark-mode',
+    'addon-screen-reader',
   ],
   framework: '@storybook/react',
   typescript: {
