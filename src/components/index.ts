@@ -1,2 +1,2 @@
-export { default as Avatar } from './Avatar'
-export { default as Button } from './Button'
+export * from './Avatar'
+export * from './Button'

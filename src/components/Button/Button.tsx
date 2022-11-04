@@ -1,36 +1,8 @@
 import { Layout } from './Button.styled'
+import { ButtonProps } from './Button.types'
 
-export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  readonly primary?: boolean
-  /**
-   * What background color to use
-   */
-  readonly backgroundColor?: string
-  /**
-   */
-  readonly size?: 'small' | 'medium' | 'large'
-  /**
-   * Button contents
-   */
-  readonly label: string
-  /**
-   * Optional click handler
-   */
-  readonly onClick?: () => void
-}
-
-/**
- * Primary UI component for user interaction
- */
-const Button = ({ backgroundColor, label = '버튼', ...props }: ButtonProps) => {
-  return (
-    <Layout type="button" style={{ backgroundColor }} {...props}>
-      {label}
-    </Layout>
-  )
+const Button = ({ children, onClick }: ButtonProps) => {
+  return <Layout onClick={onClick}>{children}</Layout>
 }
 
 export default Button
