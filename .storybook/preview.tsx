@@ -1,14 +1,16 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { addDecorator } from '@storybook/react'
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import GlobalStyle from '../src/styles/GlobalStyle'
+import { GlobalStyle, theme } from '../src/styles'
+import { dark, light } from './theme'
 
 addDecorator((Story) => (
-  <>
+  <ThemeProvider theme={theme}>
     <GlobalStyle />
     <Story />
-  </>
+  </ThemeProvider>
 ))
 
 export const parameters = {
@@ -22,5 +24,9 @@ export const parameters = {
   },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
+  },
+  darkMode: {
+    dark,
+    light,
   },
 }

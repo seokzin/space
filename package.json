@@ -79,6 +79,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.2.5",
+    "storybook-dark-mode": "^1.1.2",
     "styled-components": "^5.3.6",
     "stylelint": "^14.14.0",
     "stylelint-config-concentric-order": "^5.1.0",
