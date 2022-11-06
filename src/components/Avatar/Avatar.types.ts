@@ -1,5 +1,5 @@
 export interface AvatarProps {
-  name: string
+  name?: string
   src?: string
   size?: 'sm' | 'md' | 'lg'
 }

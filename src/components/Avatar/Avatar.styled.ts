@@ -1,32 +1,17 @@
 import styled from 'styled-components'
 
-export const Layout = styled.button<{ size: string }>`
-  border-radius: 4px;
-  background-color: #fff;
+export const Layout = styled.div<{ size: number; color: string }>`
+  border-radius: 50%;
+  background-color: ${({ color }) => color};
 
-  ${({ size }) => {
-    switch (size) {
-      case 'sm':
-        return `
-          width: 32px;
-          height: 32px;
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
+`
 
-          font-size: 12px;
-          `
-      case 'md':
-        return `
-          width: 48px;
-          height: 48px;
+export const Image = styled.img`
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 
-          font-size: 16px;
-          `
-      case 'lg':
-        return `
-          width: 64px;
-          height: 64px;
-
-          font-size: 24px;
-          `
-    }
-  }}
+  object-fit: cover;
 `
