@@ -1,3 +1,3 @@
-describe('Accordion', () => {
+describe('Tooltip', () => {
   expect('test').toBeDefined()
 })
