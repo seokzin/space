@@ -1,13 +1,14 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { addDecorator } from '@storybook/react'
 import React from 'react'
+import { useDarkMode } from 'storybook-dark-mode'
 import { ThemeProvider } from 'styled-components'
 
 import { GlobalStyle, theme } from '../src/styles'
 import { dark, light } from './theme'
 
 addDecorator((Story) => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={theme(useDarkMode() ? 'dark' : 'light')}>
     <GlobalStyle />
     <Story />
   </ThemeProvider>
