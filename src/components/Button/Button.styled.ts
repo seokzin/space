@@ -2,26 +2,21 @@ import styled from 'styled-components'
 
 export const Layout = styled.button`
   box-sizing: border-box;
+  display: block;
   outline: none;
-  border: none;
-  border-radius: 0.25rem;
-  background: #20c997;
-  padding: 0.5rem 1rem;
-  height: 2rem;
-  line-height: 1;
-  color: white;
-  font-size: 0.875rem;
-  font-weight: 600;
+  border: 0;
+  border-radius: 4px;
+  background-color: ${({ disabled, theme }) =>
+    disabled ? theme.color.gray3 : theme.color.indigo};
+  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
+  padding: 0 20px;
+  height: 40px;
+  color: ${({ theme }) => theme.color.trueWhite};
 
-  &:focus {
-    box-shadow: 0 0 8px rgb(0 0 0 / 0.2);
-  }
-
+  &:active,
+  &:focus,
   &:hover {
-    background: #38d9a9;
-  }
-
-  &:active {
-    background: #12b886;
+    background-color: ${({ disabled, theme }) =>
+      disabled ? theme.color.gray3 : theme.color.magenta};
   }
 `
