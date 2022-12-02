@@ -23,4 +23,5 @@ export const dark = create({
   appBg: '#0D1117',
   barBg: '#161B22',
   appContentBg: '#161B22',
+  inputBg: '#0D1117',
 })
