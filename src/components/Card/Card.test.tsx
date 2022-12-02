@@ -1,3 +1,5 @@
 describe('Card', () => {
-  expect('test').toBeDefined()
+  it('should render', () => {
+    expect('test').toBeDefined()
+  })
 })

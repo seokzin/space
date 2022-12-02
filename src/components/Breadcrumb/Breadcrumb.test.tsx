@@ -1,3 +1,5 @@
 describe('Breadcrumb', () => {
-  expect('test').toBeDefined()
+  it('should render', () => {
+    expect('test').toBeDefined()
+  })
 })

@@ -1,3 +1,5 @@
 describe('Textarea', () => {
-  expect('test').toBeDefined()
+  it('should render', () => {
+    expect('test').toBeDefined()
+  })
 })

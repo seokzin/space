@@ -1,3 +1,5 @@
 describe('Input', () => {
-  expect('test').toBeDefined()
+  it('should render', () => {
+    expect('test').toBeDefined()
+  })
 })
