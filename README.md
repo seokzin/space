@@ -9,7 +9,7 @@
 
 ## Stacks
 
-### ✨ Main
+### ✨ Core
 
 - React
 - TypeScript
