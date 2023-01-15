@@ -3,15 +3,15 @@ import styled from 'styled-components'
 export const Layout = styled.button`
   box-sizing: border-box;
   display: block;
-  outline: none;
-  border: 0;
-  border-radius: 4px;
+  height: 40px;
+  padding: 0 20px;
+  color: ${({ theme }) => theme.color.trueWhite};
+  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
   background-color: ${({ disabled, theme }) =>
     disabled ? theme.color.gray3 : theme.color.indigo};
-  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
-  padding: 0 20px;
-  height: 40px;
-  color: ${({ theme }) => theme.color.trueWhite};
+  border: 0;
+  border-radius: 4px;
+  outline: none;
 
   &:active,
   &:focus,
