@@ -5,7 +5,6 @@
     "stylelint-config-recess-order"
   ],
   "customSyntax": "@stylelint/postcss-css-in-js",
-  "plugins": ["stylelint-order"],
   "rules": {
     "function-no-unknown": null,
     "declaration-empty-line-before": null,
